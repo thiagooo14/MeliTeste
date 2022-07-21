@@ -1,9 +1,3 @@
-// Vamos imaginar que estamos trabalhando com o estoque de produtos de um
-// vendedor no MeLi. Será composto pela seguinte lista de produtos:
-//
-// Usando a array acima, crie uma função para cada um dos seguintes requisitos:
-// 5. Imprima no console os produtos que não possuem cor.
-
 let products = [
   {
     name: 'Macbook',
@@ -29,16 +23,21 @@ let products = [
 
 let id = 1;
 
+// 1. Adicione um ID exclusivo a cada produto começando em 1.
 products.forEach((e) => {
   e.id = id++;
 });
 
+// 2. Imprima o nome de cada um dos produtos no console
 products.forEach((e) => {
   console.log(e.name);
 });
 
+// 3. Imprima no console o produto com o id 3.
 console.log(products.find((e) => e.id === 3));
 
+// 4. Imprima no console os produtos com a cor “black”.
 console.log(products.filter((e) => e.colors.includes('black')));
 
+// 5. Imprima no console os produtos que não possuem cor.
 console.log(products.filter((e) => e.colors.length === 0));
